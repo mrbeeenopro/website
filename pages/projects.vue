@@ -3,13 +3,13 @@
     <ProjectCard
       title="Docker-optimaze"
       description="Simple, fast docker java for pteroactyl"
-      cover="/assets/images/projects/pee.jpg"
+      cover="/assets/images/projects/noimage.png"
       href="https://github.com/mrbeeenopro/dockeroptimaze"
     />
     <ProjectCard
       title="lemem forum"
       description="a forum by lemem team"
-      cover="/assets/images/projects/blueprint.jpg"
+      cover="/assets/images/projects/lemem.png"
       href="https://forum.mangovn.xyz"
     />
     <ProjectCard
