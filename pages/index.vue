@@ -1,7 +1,7 @@
 <template>
   <div class="mb-4 grid grid-cols-4 gap-4">
     <NuxtImg
-      src="/assets/images/bee.png"
+      src="/public/127410361.png"
       width="128"
       class="self-center border border-dashed border-overlay0 bg-base px-1 pt-2"
     />
