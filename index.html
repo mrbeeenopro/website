@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mrbeeenopro Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="showTab('info')">Info</a>
+    <a href="#" onclick="showTab('projects')">Projects</a>
+  </nav>
+
+  <section id="info" class="active">
+    <div class="info-container">
+      <img class="avatar" src="images/avatar.jpg" alt="Avatar" />
+      <div class="info-box">
+        <h1>Hi, I'm Mrbeeenopro</h1>
+        <p>Welcome to small page from internet. I make some random projects.</p>
+        <div class="social">
+          <a href="https://github.com/your-github" target="_blank">GitHub</a>
+          <a href="mailto:your-email@example.com">Email</a>
+        </div>
+        <div class="embed">
+          <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="projects">
+      <div class="project-card" onclick="triggerEffect(this, 'https://yourprojectlink.com')">
+        <img src="images/project1.jpg" alt="Project 1" />
+        <div class="project-overlay">This is a cool project about XYZ</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function triggerEffect(card, url) {
+      const overlay = card.querySelector('.project-overlay');
+      const originalText = overlay.textContent;
+      let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let iterations = 0;
+
+      const interval = setInterval(() => {
+        overlay.textContent = originalText
+          .split('')
+          .map((char, i) => {
+            if (i < iterations) return originalText[i];
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join('');
+
+        if (iterations >= originalText.length) {
+          clearInterval(interval);
+          window.open(url);
+        }
+
+        iterations += 1 / 3;
+      }, 30);
+    }
+  </script>
+</body>
+</html>
+
