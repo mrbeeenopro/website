@@ -61,18 +61,37 @@ html, body {
   color: #ff4444;
 }
 
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px; /* Vuông bo nhẹ */
+  border: 2px solid #ff4444;
+  object-fit: cover;
+}
+
 .profile {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2px solid #ff4444;
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .description {
+    margin-top: 10px;
+  }
 }
+
 
 .description h2 {
   margin: 0;
