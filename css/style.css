@@ -118,6 +118,10 @@ html, body {
   color: #000;
 }
 
+.links i {
+  margin-right: 6px;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
